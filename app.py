@@ -1,10 +1,10 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-   return "Heisann dagbok!"
+   return render_template('frontpage.html')
 
 @app.route("/users/<user>")
 def users(user):
